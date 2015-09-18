@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{22431AF4-D03E-4C23-A1AB-46A7DFB57250}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>FACTURACION.My.MyApplication</StartupObject>
+    <RootNamespace>FACTURACION</RootNamespace>
+    <AssemblyName>FACTURACION</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>FACTURACION.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>FACTURACION.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>caja.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ARTICULOS.Designer.vb">
+      <DependentUpon>ARTICULOS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ARTICULOS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BODEGAS.Designer.vb">
+      <DependentUpon>BODEGAS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="BODEGAS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CONFIRMAR_INV.Designer.vb">
+      <DependentUpon>CONFIRMAR_INV.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CONFIRMAR_INV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrREMISION.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrREMISION.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DEVOLUCION2.Designer.vb">
+      <DependentUpon>DEVOLUCION2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DEVOLUCION2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DEVOLUCION_REM.Designer.vb">
+      <DependentUpon>DEVOLUCION_REM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DEVOLUCION_REM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DS_REMISIONES.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DS_REMISIONES.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="INVENTARIO1.Designer.vb">
+      <DependentUpon>INVENTARIO1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="INVENTARIO1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="INVENTARIO_INICIAL.Designer.vb">
+      <DependentUpon>INVENTARIO_INICIAL.vb</DependentUpon>
+    </Compile>
+    <Compile Include="INVENTARIO_INICIAL.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KARDEX.Designer.vb">
+      <DependentUpon>KARDEX.vb</DependentUpon>
+    </Compile>
+    <Compile Include="KARDEX.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MENU1.Designer.vb">
+      <DependentUpon>MENU1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MENU1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PRESENTACION.Designer.vb">
+      <DependentUpon>PRESENTACION.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PRESENTACION.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="REMISIONES.Designer.vb">
+      <DependentUpon>REMISIONES.vb</DependentUpon>
+    </Compile>
+    <Compile Include="REMISIONES.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="REPORT_REMISION.Designer.vb">
+      <DependentUpon>REPORT_REMISION.vb</DependentUpon>
+    </Compile>
+    <Compile Include="REPORT_REMISION.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TERCEROS.Designer.vb">
+      <DependentUpon>TERCEROS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TERCEROS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ARTICULOS.resx">
+      <DependentUpon>ARTICULOS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BODEGAS.resx">
+      <DependentUpon>BODEGAS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CONFIRMAR_INV.resx">
+      <DependentUpon>CONFIRMAR_INV.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrREMISION.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrREMISION.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DEVOLUCION2.resx">
+      <DependentUpon>DEVOLUCION2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DEVOLUCION_REM.resx">
+      <DependentUpon>DEVOLUCION_REM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="INVENTARIO1.resx">
+      <DependentUpon>INVENTARIO1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="INVENTARIO_INICIAL.resx">
+      <DependentUpon>INVENTARIO_INICIAL.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KARDEX.resx">
+      <DependentUpon>KARDEX.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MENU1.resx">
+      <DependentUpon>MENU1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRESENTACION.resx">
+      <DependentUpon>PRESENTACION.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REMISIONES.resx">
+      <DependentUpon>REMISIONES.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORT_REMISION.resx">
+      <DependentUpon>REPORT_REMISION.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TERCEROS.resx">
+      <DependentUpon>TERCEROS.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DS_REMISIONES.xsc">
+      <DependentUpon>DS_REMISIONES.xsd</DependentUpon>
+    </None>
+    <None Include="DS_REMISIONES.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DS_REMISIONES.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DS_REMISIONES.xss">
+      <DependentUpon>DS_REMISIONES.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floppy_disk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\page_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\page_edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salir_48_48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cool1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="caja.ico" />
+    <None Include="Resources\repeat1.png" />
+    <None Include="Resources\repeat.png" />
+    <None Include="Resources\MillerMei.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
