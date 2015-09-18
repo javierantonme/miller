@@ -1,0 +1,200 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+AFILIAMOS
+</name>
+</assembly>
+<members>
+<member name="T:AFILIAMOS.DS_RC.CLIENTESDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AFILIAMOS.DS_RC.CONCEPTOSDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AFILIAMOS.DS_RC.EMPRESADataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AFILIAMOS.DS_RC.FORMAS_PAGODataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AFILIAMOS.DS_RC.RECIBOSCAJA_CDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AFILIAMOS.DS_RC.RECIBOSCAJA_DDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AFILIAMOS.DS_RC.CLIENTESRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AFILIAMOS.DS_RC.CONCEPTOSRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AFILIAMOS.DS_RC.EMPRESARow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AFILIAMOS.DS_RC.FORMAS_PAGORow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AFILIAMOS.DS_RC.RECIBOSCAJA_CRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AFILIAMOS.DS_RC.RECIBOSCAJA_DRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AFILIAMOS.DS_RC.CLIENTESRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AFILIAMOS.DS_RC.CONCEPTOSRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AFILIAMOS.DS_RC.EMPRESARowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AFILIAMOS.DS_RC.FORMAS_PAGORowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AFILIAMOS.DS_RC.RECIBOSCAJA_CRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AFILIAMOS.DS_RC.RECIBOSCAJA_DRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AFILIAMOS.DS_RC">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:AFILIAMOS.DS_RCTableAdapters.CLIENTESTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:AFILIAMOS.DS_RCTableAdapters.CONCEPTOSTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:AFILIAMOS.DS_RCTableAdapters.EMPRESATableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:AFILIAMOS.DS_RCTableAdapters.FORMAS_PAGOTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:AFILIAMOS.DS_RCTableAdapters.RECIBOSCAJA_CTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:AFILIAMOS.DS_RCTableAdapters.RECIBOSCAJA_DTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:AFILIAMOS.DS_RCTableAdapters.TableAdapterManager.UpdateUpdatedRows(AFILIAMOS.DS_RC,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:AFILIAMOS.DS_RCTableAdapters.TableAdapterManager.UpdateInsertedRows(AFILIAMOS.DS_RC,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:AFILIAMOS.DS_RCTableAdapters.TableAdapterManager.UpdateDeletedRows(AFILIAMOS.DS_RC,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:AFILIAMOS.DS_RCTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:AFILIAMOS.DS_RCTableAdapters.TableAdapterManager.UpdateAll(AFILIAMOS.DS_RC)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:AFILIAMOS.DS_RCTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:AFILIAMOS.DS_RCTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:AFILIAMOS.DS_RCTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="P:AFILIAMOS.My.Resources.Resources.ResourceManager">
+	<summary>
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+</summary>
+</member><member name="P:AFILIAMOS.My.Resources.Resources.Culture">
+	<summary>
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+</summary>
+</member><member name="P:AFILIAMOS.My.Resources.Resources.AFILIADO">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AFILIAMOS.My.Resources.Resources.AFILIADO1">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AFILIAMOS.My.Resources.Resources.afiliamos">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AFILIAMOS.My.Resources.Resources.afiliamos1">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AFILIAMOS.My.Resources.Resources.floppy_disk">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AFILIAMOS.My.Resources.Resources.logo_empresaROMBO">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AFILIAMOS.My.Resources.Resources.page_add">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AFILIAMOS.My.Resources.Resources.page_edit">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AFILIAMOS.My.Resources.Resources.palomita_verde">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AFILIAMOS.My.Resources.Resources.printer1">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AFILIAMOS.My.Resources.Resources.salir_48_48">
+	<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member><member name="T:AFILIAMOS.My.Resources.Resources">
+	<summary>
+  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
+</summary>
+</member>
+</members>
+</doc>

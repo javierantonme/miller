@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="_UpgradeWizard_Files\UpgradeWizardLog.xslt"?>
+<log>
+  <event action="Analyze" type="Success" name="Assembly References" path="D:\JavierMelo\AEGP\AFILIAMOS\AFILIAMOS\AFILIAMOS.vbproj" />
+  <event action="Analyze" type="Success" name="AFILIACIONES.resx" path="D:\JavierMelo\AEGP\AFILIAMOS\AFILIAMOS\AFILIACIONES.resx" />
+  <event action="Analyze" type="Success" name="Assembly References" path="D:\JavierMelo\AEGP\AFILIAMOS\AFILIAMOS\App.config" />
+  <event action="Analyze" type="Success" name="Http Handlers" path="D:\JavierMelo\AEGP\AFILIAMOS\AFILIAMOS\App.config" />
+  <event action="Analyze" type="Success" name="Handlers (IIS7+)" path="D:\JavierMelo\AEGP\AFILIAMOS\AFILIAMOS\App.config" />
+  <event action="Analyze" type="Success" name="Config Sections" path="D:\JavierMelo\AEGP\AFILIAMOS\AFILIAMOS\App.config" />
+  <event action="Analyze" type="Success" name="Render Extensions" path="D:\JavierMelo\AEGP\AFILIAMOS\AFILIAMOS\App.config" />
+  <event action="Analyze" type="Success" name="Session State Providers" path="D:\JavierMelo\AEGP\AFILIAMOS\AFILIAMOS\App.config" />
+  <event action="Analyze" type="Success" name="App.config" path="D:\JavierMelo\AEGP\AFILIAMOS\AFILIAMOS\App.config" />
+  <event action="Analyze" type="Success" name="ASESOR.resx" path="D:\JavierMelo\AEGP\AFILIAMOS\AFILIAMOS\ASESOR.resx" />
+  <event action="Analyze" type="Success" name="BANCOS.resx" path="D:\JavierMelo\AEGP\AFILIAMOS\AFILIAMOS\BANCOS.resx" />
+  <event action="Analyze" type="Success" name="CAJAS1.resx" path="D:\JavierMelo\AEGP\AFILIAMOS\AFILIAMOS\CAJAS1.resx" />
+  <event action="Analyze" type="Success" name="CLIENTES.resx" path="D:\JavierMelo\AEGP\AFILIAMOS\AFILIAMOS\CLIENTES.resx" />
+  <event action="Analyze" type="Success" name="CONCEPTOS.resx" path="D:\JavierMelo\AEGP\AFILIAMOS\AFILIAMOS\CONCEPTOS.resx" />
+  <event action="Analyze" type="Success" name="CUENTAS.resx" path="D:\JavierMelo\AEGP\AFILIAMOS\AFILIAMOS\CUENTAS.resx" />
+  <event action="Analyze" type="Success" name="EMPRESA.resx" path="D:\JavierMelo\AEGP\AFILIAMOS\AFILIAMOS\EMPRESA.resx" />
+  <event action="Analyze" type="Success" name="IMPRIMIR.resx" path="D:\JavierMelo\AEGP\AFILIAMOS\AFILIAMOS\IMPRIMIR.resx" />
+  <event action="Analyze" type="Success" name="IMPRIMIR_LIQUIDACION_2.resx" path="D:\JavierMelo\AEGP\AFILIAMOS\AFILIAMOS\IMPRIMIR_LIQUIDACION_2.resx" />
+  <event action="Analyze" type="Success" name="LIQUIDACION_ASESORES.resx" path="D:\JavierMelo\AEGP\AFILIAMOS\AFILIAMOS\LIQUIDACION_ASESORES.resx" />
+  <event action="Analyze" type="Success" name="LOGIN.resx" path="D:\JavierMelo\AEGP\AFILIAMOS\AFILIAMOS\LOGIN.resx" />
+  <event action="Analyze" type="Success" name="MENU11.resx" path="D:\JavierMelo\AEGP\AFILIAMOS\AFILIAMOS\MENU11.resx" />
+  <event action="Analyze" type="Success" name="Resources.resx" path="D:\JavierMelo\AEGP\AFILIAMOS\AFILIAMOS\My Project\Resources.resx" />
+  <event action="Analyze" type="Success" name="RECIBOS DE CABA.resx" path="D:\JavierMelo\AEGP\AFILIAMOS\AFILIAMOS\RECIBOS DE CABA.resx" />
+  <event action="Analyze" type="Success" name="REPORT_LIQUIDACION.vb.resx" path="D:\JavierMelo\AEGP\AFILIAMOS\AFILIAMOS\REPORT_LIQUIDACION.vb.resx" />
+  <event action="Analyze" type="Success" name="REPORT_RECIBOCAJA.resx" path="D:\JavierMelo\AEGP\AFILIAMOS\AFILIAMOS\REPORT_RECIBOCAJA.resx" />
+  <event action="Analyze" type="Success" name="RP_LIQUIDACION.resx" path="D:\JavierMelo\AEGP\AFILIAMOS\AFILIAMOS\RP_LIQUIDACION.resx" />
+  <event action="Analyze" type="Success" name="RP_RC.resx" path="D:\JavierMelo\AEGP\AFILIAMOS\AFILIAMOS\RP_RC.resx" />
+  <event action="Analyze" type="Success" name="SALARIO_MINIMO.resx" path="D:\JavierMelo\AEGP\AFILIAMOS\AFILIAMOS\SALARIO_MINIMO.resx" />
+  <event action="Analyze" type="Success" name="TEMA.resx" path="D:\JavierMelo\AEGP\AFILIAMOS\AFILIAMOS\TEMA.resx" />
+  <event action="Analyze" type="Success" name="TERCEROS.resx" path="D:\JavierMelo\AEGP\AFILIAMOS\AFILIAMOS\TERCEROS.resx" />
+  <event action="Analyze" type="Success" name="USUARIOS.resx" path="D:\JavierMelo\AEGP\AFILIAMOS\AFILIAMOS\USUARIOS.resx" />
+  <event action="Analyze" type="Success" name="AFILIAMOS" path="D:\JavierMelo\AEGP\AFILIAMOS\AFILIAMOS\AFILIAMOS.vbproj" />
+  <event action="Analyze" type="Success" name="AFILIAMOS" path="D:\JavierMelo\AEGP\AFILIAMOS\AFILIAMOS.sln" />
+  <event action="Backup" type="Success" name="AFILIAMOS" path="D:\JavierMelo\AEGP\AFILIAMOS\AFILIAMOS\AFILIAMOS.vbproj" />
+  <event action="Upgrade" type="Success" name="Assembly References" path="D:\JavierMelo\AEGP\AFILIAMOS\AFILIAMOS\AFILIAMOS.vbproj" />
+  <event action="Upgrade" type="Success" name="RP_LIQUIDACION.resx" path="D:\JavierMelo\AEGP\AFILIAMOS\AFILIAMOS\RP_LIQUIDACION.resx" />
+  <event action="Upgrade" type="Success" name="RP_RC.resx" path="D:\JavierMelo\AEGP\AFILIAMOS\AFILIAMOS\RP_RC.resx" />
+  <event action="Upgrade" type="Success" name="AFILIAMOS" path="D:\JavierMelo\AEGP\AFILIAMOS\AFILIAMOS\AFILIAMOS.vbproj" />
+  <event action="Upgrade" type="Success" name="AFILIAMOS" path="D:\JavierMelo\AEGP\AFILIAMOS\AFILIAMOS.sln" />
+</log>
