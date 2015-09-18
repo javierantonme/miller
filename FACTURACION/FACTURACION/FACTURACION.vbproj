@@ -125,6 +125,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DS_REMISIONES.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FACTURACION.Designer.vb">
+      <DependentUpon>FACTURACION.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FACTURACION.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +189,12 @@
     <Compile Include="REMISIONES.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="REMISONES_PENDIENTES.Designer.vb">
+      <DependentUpon>REMISONES_PENDIENTES.vb</DependentUpon>
+    </Compile>
+    <Compile Include="REMISONES_PENDIENTES.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="REPORT_REMISION.Designer.vb">
       <DependentUpon>REPORT_REMISION.vb</DependentUpon>
     </Compile>
@@ -216,6 +228,9 @@
     <EmbeddedResource Include="DEVOLUCION_REM.resx">
       <DependentUpon>DEVOLUCION_REM.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FACTURACION.resx">
+      <DependentUpon>FACTURACION.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
@@ -242,6 +257,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="REMISIONES.resx">
       <DependentUpon>REMISIONES.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REMISONES_PENDIENTES.resx">
+      <DependentUpon>REMISONES_PENDIENTES.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="REPORT_REMISION.resx">
       <DependentUpon>REPORT_REMISION.vb</DependentUpon>
