@@ -25,6 +25,7 @@ Partial Class REMISIONES_PENDIENTES
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.BT_ENVIAR = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Column1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -33,6 +34,7 @@ Partial Class REMISIONES_PENDIENTES
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1})
         Me.DataGridView1.Location = New System.Drawing.Point(33, 40)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
@@ -57,6 +59,12 @@ Partial Class REMISIONES_PENDIENTES
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Label1"
         '
+        'Column1
+        '
+        Me.Column1.HeaderText = ""
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        '
         'REMISIONES_PENDIENTES
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -75,4 +83,5 @@ Partial Class REMISIONES_PENDIENTES
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents BT_ENVIAR As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Column1 As DataGridViewCheckBoxColumn
 End Class

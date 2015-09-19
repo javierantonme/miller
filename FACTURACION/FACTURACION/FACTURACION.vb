@@ -44,7 +44,7 @@ Public Class FACTURACION
     End Sub
     Sub cargarremisiones(OIDSELECCIONADOS() As Integer)
         Try
-            For number As Integer = -1 To OIDSELECCIONADOS.Length - 1 Step 1
+            For number = 0 To OIDSELECCIONADOS.Length - 1
                 Dim conex As New SqlConnection(ConfigurationManager.ConnectionStrings("conexion").ConnectionString)
                 Dim cmd As New SqlCommand("BUSCAR_REMISION", conex)
                 cmd.CommandType = CommandType.StoredProcedure
