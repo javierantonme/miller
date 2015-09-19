@@ -42,4 +42,8 @@ Public Class MENU1
     Private Sub KardexToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles KardexToolStripMenuItem.Click
         KARDEX.ShowDialog()
     End Sub
+
+    Private Sub FacturacionToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles FacturacionToolStripMenuItem1.Click
+        FACTURACION.ShowDialog()
+    End Sub
 End Class

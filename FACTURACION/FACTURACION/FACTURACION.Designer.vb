@@ -55,12 +55,6 @@ Partial Class FACTURACION
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TB_CANTIDADT = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Articulo = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Cantidad = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Valor_Unitario = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Sub_Total = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Eliminar = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ToolStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -116,6 +110,7 @@ Partial Class FACTURACION
         '
         'BT_REMISIONES
         '
+        Me.BT_REMISIONES.Enabled = False
         Me.BT_REMISIONES.Location = New System.Drawing.Point(819, 52)
         Me.BT_REMISIONES.Name = "BT_REMISIONES"
         Me.BT_REMISIONES.Size = New System.Drawing.Size(75, 23)
@@ -125,6 +120,7 @@ Partial Class FACTURACION
         '
         'TB_TELEFONO
         '
+        Me.TB_TELEFONO.Enabled = False
         Me.TB_TELEFONO.Location = New System.Drawing.Point(504, 76)
         Me.TB_TELEFONO.Name = "TB_TELEFONO"
         Me.TB_TELEFONO.Size = New System.Drawing.Size(263, 20)
@@ -132,6 +128,7 @@ Partial Class FACTURACION
         '
         'TB_DIRECCION
         '
+        Me.TB_DIRECCION.Enabled = False
         Me.TB_DIRECCION.Location = New System.Drawing.Point(10, 76)
         Me.TB_DIRECCION.Name = "TB_DIRECCION"
         Me.TB_DIRECCION.Size = New System.Drawing.Size(263, 20)
@@ -139,6 +136,7 @@ Partial Class FACTURACION
         '
         'TB_NOMBRE
         '
+        Me.TB_NOMBRE.Enabled = False
         Me.TB_NOMBRE.Location = New System.Drawing.Point(504, 39)
         Me.TB_NOMBRE.Name = "TB_NOMBRE"
         Me.TB_NOMBRE.Size = New System.Drawing.Size(263, 20)
@@ -356,43 +354,10 @@ Partial Class FACTURACION
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Codigo, Me.Articulo, Me.Cantidad, Me.Valor_Unitario, Me.Sub_Total, Me.Eliminar})
         Me.DataGridView1.Location = New System.Drawing.Point(323, 211)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(624, 391)
         Me.DataGridView1.TabIndex = 9
-        '
-        'Codigo
-        '
-        Me.Codigo.HeaderText = "Codigo"
-        Me.Codigo.Name = "Codigo"
-        '
-        'Articulo
-        '
-        Me.Articulo.HeaderText = "Articulo"
-        Me.Articulo.Name = "Articulo"
-        '
-        'Cantidad
-        '
-        Me.Cantidad.HeaderText = "Cantidad"
-        Me.Cantidad.Name = "Cantidad"
-        '
-        'Valor_Unitario
-        '
-        Me.Valor_Unitario.HeaderText = "Valor Unitario"
-        Me.Valor_Unitario.Name = "Valor_Unitario"
-        '
-        'Sub_Total
-        '
-        Me.Sub_Total.HeaderText = "Sub Total"
-        Me.Sub_Total.Name = "Sub_Total"
-        Me.Sub_Total.ReadOnly = True
-        '
-        'Eliminar
-        '
-        Me.Eliminar.HeaderText = "Eliminar"
-        Me.Eliminar.Name = "Eliminar"
-        Me.Eliminar.ReadOnly = True
         '
         'FACTURACION
         '
@@ -454,10 +419,4 @@ Partial Class FACTURACION
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents TB_CANTIDADT As System.Windows.Forms.TextBox
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
-    Friend WithEvents Codigo As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Articulo As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Cantidad As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Valor_Unitario As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Sub_Total As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Eliminar As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

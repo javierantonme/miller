@@ -41,6 +41,7 @@ Partial Class MENU1
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.FacturacionToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -114,7 +115,7 @@ Partial Class MENU1
         '
         'FacturacionToolStripMenuItem
         '
-        Me.FacturacionToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TodasToolStripMenuItem})
+        Me.FacturacionToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TodasToolStripMenuItem, Me.FacturacionToolStripMenuItem1})
         Me.FacturacionToolStripMenuItem.Name = "FacturacionToolStripMenuItem"
         Me.FacturacionToolStripMenuItem.Size = New System.Drawing.Size(81, 20)
         Me.FacturacionToolStripMenuItem.Text = "Facturacion"
@@ -122,7 +123,7 @@ Partial Class MENU1
         'TodasToolStripMenuItem
         '
         Me.TodasToolStripMenuItem.Name = "TodasToolStripMenuItem"
-        Me.TodasToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
+        Me.TodasToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.TodasToolStripMenuItem.Text = "Remisiones"
         '
         'StatusStrip
@@ -161,6 +162,12 @@ Partial Class MENU1
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 9
         Me.PictureBox1.TabStop = False
+        '
+        'FacturacionToolStripMenuItem1
+        '
+        Me.FacturacionToolStripMenuItem1.Name = "FacturacionToolStripMenuItem1"
+        Me.FacturacionToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.FacturacionToolStripMenuItem1.Text = "Facturacion"
         '
         'MENU1
         '
@@ -205,5 +212,6 @@ Partial Class MENU1
     Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
     Friend WithEvents TodasToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents KardexToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents FacturacionToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
 
 End Class
