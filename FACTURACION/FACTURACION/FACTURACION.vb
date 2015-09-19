@@ -36,7 +36,7 @@ Public Class FACTURACION
     End Sub
 
     Private Sub BT_REMISIONES_Click(sender As Object, e As EventArgs) Handles BT_REMISIONES.Click
-        REMISONES_PENDIENTES.ShowDialog()
+        '   REMISONES_PENDIENTES.ShowDialog()
 
     End Sub
     

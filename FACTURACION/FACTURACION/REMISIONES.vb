@@ -255,7 +255,7 @@ Public Class REMISIONES
         GUARDAR_CABECERA()
         BUSCAR_LAS_OID_REPORT()
         Dispose()
-        REPORT_REMISION.Show()
+        RP_REMISION2.Show()
         ' DEVOLUCION_REM.Dispose()
         REPORT_REMISION.WindowState = FormWindowState.Maximized
     End Sub
@@ -271,7 +271,7 @@ Public Class REMISIONES
             dr = cmd.ExecuteReader
             If dr.Read Then
                 OID = dr(0)
-                REPORT_REMISION.OID = OID
+                RP_REMISION2.OID = OID
                 conex.Close()
             Else
                 conex.Close()

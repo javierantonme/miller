@@ -199,8 +199,8 @@ Public Class DEVOLUCION_REM
         If i <> -1 Then
             If DataGridView1.Rows(i).Selected = True Then
                 OID = DataGridView1.Rows(i).Cells(0).Value.ToString()
-                REPORT_REMISION.OID = OID
-                REPORT_REMISION.Show()
+                RP_REMISION2.OID = OID
+                RP_REMISION2.Show()
             End If
         End If
     End Sub
