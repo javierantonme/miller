@@ -33,7 +33,7 @@ Public Class REMISIONES_PENDIENTES
         Dim filaseleccionada As Integer = 0
         Dim OIDSELECCIONADOS() As Integer
         For a = 0 To DataGridView1.RowCount - 1
-            If DataGridView1.Rows(a).Cells(0) == True Then
+            If DataGridView1.Rows(a).Cells(0).Value Then
                 ReDim OIDSELECCIONADOS(0 To OIDSELECCIONADOS.Length + 1)
                 OIDSELECCIONADOS(filaseleccionada) = DataGridView1.Rows(a).Cells(1).Value
                 filaseleccionada = filaseleccionada + 1
@@ -41,5 +41,15 @@ Public Class REMISIONES_PENDIENTES
             End If
         Next
         Dispose()
+    End Sub
+    Private Sub DataGridView1_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+
+        If e.ColumnIndex = Me.DataGridView1.Columns.Item("Column1").Index Then
+            Dim chkCell As DataGridViewCheckBoxCell = Me.DataGridView1.Rows(e.RowIndex).Cells("Column1")
+            chkCell.Value = Not chkCell.Value
+        End If
+
+        '   MsgBox("Estado: " & EstadoCheck(e.RowIndex))
+
     End Sub
 End Class

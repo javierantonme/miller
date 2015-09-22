@@ -160,6 +160,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AJUSTE.Designer.vb">
+      <DependentUpon>AJUSTE.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AJUSTE.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ARTICULOS.Designer.vb">
       <DependentUpon>ARTICULOS.vb</DependentUpon>
     </Compile>
@@ -232,6 +238,12 @@
     <Compile Include="KARDEX.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="LOGIN.Designer.vb">
+      <DependentUpon>LOGIN.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LOGIN.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MENU1.Designer.vb">
       <DependentUpon>MENU1.vb</DependentUpon>
     </Compile>
@@ -295,8 +307,17 @@
     <Compile Include="TERCEROS.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="USUARIOS.Designer.vb">
+      <DependentUpon>USUARIOS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="USUARIOS.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AJUSTE.resx">
+      <DependentUpon>AJUSTE.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ARTICULOS.resx">
       <DependentUpon>ARTICULOS.vb</DependentUpon>
     </EmbeddedResource>
@@ -331,6 +352,9 @@
     <EmbeddedResource Include="KARDEX.resx">
       <DependentUpon>KARDEX.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LOGIN.resx">
+      <DependentUpon>LOGIN.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MENU1.resx">
       <DependentUpon>MENU1.vb</DependentUpon>
     </EmbeddedResource>
@@ -361,6 +385,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TERCEROS.resx">
       <DependentUpon>TERCEROS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="USUARIOS.resx">
+      <DependentUpon>USUARIOS.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
