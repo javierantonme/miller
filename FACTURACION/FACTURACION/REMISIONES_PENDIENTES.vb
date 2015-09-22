@@ -31,15 +31,17 @@ Public Class REMISIONES_PENDIENTES
     Private Sub BT_ENVIAR_Click(sender As Object, e As EventArgs) Handles BT_ENVIAR.Click
         Dim a As Integer = 0
         Dim filaseleccionada As Integer = 0
-        Dim OIDSELECCIONADOS() As Integer
+        Dim OIDSELECCIONADOS(DataGridView1.RowCount - 1) As Integer
         For a = 0 To DataGridView1.RowCount - 1
             If DataGridView1.Rows(a).Cells(0).Value Then
-                ReDim OIDSELECCIONADOS(0 To OIDSELECCIONADOS.Length + 1)
+                'ReDim OIDSELECCIONADOS(0 To OIDSELECCIONADOS.Length)
                 OIDSELECCIONADOS(filaseleccionada) = DataGridView1.Rows(a).Cells(1).Value
                 filaseleccionada = filaseleccionada + 1
-                FACTURACION.cargarremisiones(OIDSELECCIONADOS)
             End If
         Next
+        FACTURACION.cargarremisiones(OIDSELECCIONADOS)
+        Dim bla As String = "hellobaby"
+        Dim charArray() As Char = bla.ToCharArray
         Dispose()
     End Sub
     Private Sub DataGridView1_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
