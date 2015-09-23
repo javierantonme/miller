@@ -36,19 +36,19 @@ Partial Class FACTURACION
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.TB_VALOR = New System.Windows.Forms.TextBox()
-        Me.TB_CANTIDADAC = New System.Windows.Forms.TextBox()
-        Me.TB_ARTSELECCIONADO = New System.Windows.Forms.TextBox()
-        Me.TB_CODARTICULO = New System.Windows.Forms.TextBox()
+        Me.TB_PRECIO = New System.Windows.Forms.TextBox()
+        Me.TB_CANTIDAD_ACTUAL = New System.Windows.Forms.TextBox()
+        Me.TB_ARTICULO = New System.Windows.Forms.TextBox()
+        Me.TB_CODIGO = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.LB_INFO = New System.Windows.Forms.ListBox()
+        Me.TB_INFO = New System.Windows.Forms.TextBox()
         Me.RB_DESCRIPCION = New System.Windows.Forms.RadioButton()
         Me.RB_CODIGO = New System.Windows.Forms.RadioButton()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.TB_BODEGA = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.FontDialog1 = New System.Windows.Forms.FontDialog()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -187,19 +187,19 @@ Partial Class FACTURACION
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.TB_VALOR)
-        Me.GroupBox2.Controls.Add(Me.TB_CANTIDADAC)
-        Me.GroupBox2.Controls.Add(Me.TB_ARTSELECCIONADO)
-        Me.GroupBox2.Controls.Add(Me.TB_CODARTICULO)
+        Me.GroupBox2.Controls.Add(Me.TB_PRECIO)
+        Me.GroupBox2.Controls.Add(Me.TB_CANTIDAD_ACTUAL)
+        Me.GroupBox2.Controls.Add(Me.TB_ARTICULO)
+        Me.GroupBox2.Controls.Add(Me.TB_CODIGO)
         Me.GroupBox2.Controls.Add(Me.Label9)
         Me.GroupBox2.Controls.Add(Me.Label8)
         Me.GroupBox2.Controls.Add(Me.Label7)
         Me.GroupBox2.Controls.Add(Me.Label6)
-        Me.GroupBox2.Controls.Add(Me.ListBox1)
-        Me.GroupBox2.Controls.Add(Me.TextBox1)
+        Me.GroupBox2.Controls.Add(Me.LB_INFO)
+        Me.GroupBox2.Controls.Add(Me.TB_INFO)
         Me.GroupBox2.Controls.Add(Me.RB_DESCRIPCION)
         Me.GroupBox2.Controls.Add(Me.RB_CODIGO)
-        Me.GroupBox2.Controls.Add(Me.ComboBox1)
+        Me.GroupBox2.Controls.Add(Me.TB_BODEGA)
         Me.GroupBox2.Controls.Add(Me.Label5)
         Me.GroupBox2.Location = New System.Drawing.Point(23, 201)
         Me.GroupBox2.Name = "GroupBox2"
@@ -208,33 +208,33 @@ Partial Class FACTURACION
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Datos del producto"
         '
-        'TB_VALOR
+        'TB_PRECIO
         '
-        Me.TB_VALOR.Location = New System.Drawing.Point(127, 350)
-        Me.TB_VALOR.Name = "TB_VALOR"
-        Me.TB_VALOR.Size = New System.Drawing.Size(100, 20)
-        Me.TB_VALOR.TabIndex = 13
+        Me.TB_PRECIO.Location = New System.Drawing.Point(127, 350)
+        Me.TB_PRECIO.Name = "TB_PRECIO"
+        Me.TB_PRECIO.Size = New System.Drawing.Size(100, 20)
+        Me.TB_PRECIO.TabIndex = 13
         '
-        'TB_CANTIDADAC
+        'TB_CANTIDAD_ACTUAL
         '
-        Me.TB_CANTIDADAC.Location = New System.Drawing.Point(13, 350)
-        Me.TB_CANTIDADAC.Name = "TB_CANTIDADAC"
-        Me.TB_CANTIDADAC.Size = New System.Drawing.Size(100, 20)
-        Me.TB_CANTIDADAC.TabIndex = 12
+        Me.TB_CANTIDAD_ACTUAL.Location = New System.Drawing.Point(13, 350)
+        Me.TB_CANTIDAD_ACTUAL.Name = "TB_CANTIDAD_ACTUAL"
+        Me.TB_CANTIDAD_ACTUAL.Size = New System.Drawing.Size(100, 20)
+        Me.TB_CANTIDAD_ACTUAL.TabIndex = 12
         '
-        'TB_ARTSELECCIONADO
+        'TB_ARTICULO
         '
-        Me.TB_ARTSELECCIONADO.Location = New System.Drawing.Point(13, 306)
-        Me.TB_ARTSELECCIONADO.Name = "TB_ARTSELECCIONADO"
-        Me.TB_ARTSELECCIONADO.Size = New System.Drawing.Size(100, 20)
-        Me.TB_ARTSELECCIONADO.TabIndex = 11
+        Me.TB_ARTICULO.Location = New System.Drawing.Point(13, 306)
+        Me.TB_ARTICULO.Name = "TB_ARTICULO"
+        Me.TB_ARTICULO.Size = New System.Drawing.Size(100, 20)
+        Me.TB_ARTICULO.TabIndex = 11
         '
-        'TB_CODARTICULO
+        'TB_CODIGO
         '
-        Me.TB_CODARTICULO.Location = New System.Drawing.Point(13, 260)
-        Me.TB_CODARTICULO.Name = "TB_CODARTICULO"
-        Me.TB_CODARTICULO.Size = New System.Drawing.Size(100, 20)
-        Me.TB_CODARTICULO.TabIndex = 10
+        Me.TB_CODIGO.Location = New System.Drawing.Point(13, 260)
+        Me.TB_CODIGO.Name = "TB_CODIGO"
+        Me.TB_CODIGO.Size = New System.Drawing.Size(100, 20)
+        Me.TB_CODIGO.TabIndex = 10
         '
         'Label9
         '
@@ -272,20 +272,20 @@ Partial Class FACTURACION
         Me.Label6.TabIndex = 6
         Me.Label6.Text = "Codigo articulo"
         '
-        'ListBox1
+        'LB_INFO
         '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(10, 115)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(226, 121)
-        Me.ListBox1.TabIndex = 5
+        Me.LB_INFO.FormattingEnabled = True
+        Me.LB_INFO.Location = New System.Drawing.Point(10, 115)
+        Me.LB_INFO.Name = "LB_INFO"
+        Me.LB_INFO.Size = New System.Drawing.Size(226, 121)
+        Me.LB_INFO.TabIndex = 5
         '
-        'TextBox1
+        'TB_INFO
         '
-        Me.TextBox1.Location = New System.Drawing.Point(10, 88)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(226, 20)
-        Me.TextBox1.TabIndex = 4
+        Me.TB_INFO.Location = New System.Drawing.Point(10, 88)
+        Me.TB_INFO.Name = "TB_INFO"
+        Me.TB_INFO.Size = New System.Drawing.Size(226, 20)
+        Me.TB_INFO.TabIndex = 4
         '
         'RB_DESCRIPCION
         '
@@ -309,13 +309,13 @@ Partial Class FACTURACION
         Me.RB_CODIGO.Text = "Codigo"
         Me.RB_CODIGO.UseVisualStyleBackColor = True
         '
-        'ComboBox1
+        'TB_BODEGA
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(10, 37)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox1.TabIndex = 1
+        Me.TB_BODEGA.FormattingEnabled = True
+        Me.TB_BODEGA.Location = New System.Drawing.Point(10, 37)
+        Me.TB_BODEGA.Name = "TB_BODEGA"
+        Me.TB_BODEGA.Size = New System.Drawing.Size(121, 21)
+        Me.TB_BODEGA.TabIndex = 1
         '
         'Label5
         '
@@ -401,20 +401,20 @@ Partial Class FACTURACION
     Friend WithEvents BT_REMISIONES As System.Windows.Forms.Button
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents FontDialog1 As System.Windows.Forms.FontDialog
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents TB_BODEGA As System.Windows.Forms.ComboBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents RB_DESCRIPCION As System.Windows.Forms.RadioButton
     Friend WithEvents RB_CODIGO As System.Windows.Forms.RadioButton
-    Friend WithEvents ListBox1 As System.Windows.Forms.ListBox
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents LB_INFO As System.Windows.Forms.ListBox
+    Friend WithEvents TB_INFO As System.Windows.Forms.TextBox
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents TB_VALOR As System.Windows.Forms.TextBox
-    Friend WithEvents TB_CANTIDADAC As System.Windows.Forms.TextBox
-    Friend WithEvents TB_ARTSELECCIONADO As System.Windows.Forms.TextBox
-    Friend WithEvents TB_CODARTICULO As System.Windows.Forms.TextBox
+    Friend WithEvents TB_PRECIO As System.Windows.Forms.TextBox
+    Friend WithEvents TB_CANTIDAD_ACTUAL As System.Windows.Forms.TextBox
+    Friend WithEvents TB_ARTICULO As System.Windows.Forms.TextBox
+    Friend WithEvents TB_CODIGO As System.Windows.Forms.TextBox
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents TB_CANTIDADT As System.Windows.Forms.TextBox
