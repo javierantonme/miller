@@ -152,6 +152,7 @@ Public Class AJUSTE
     End Sub
 
     Sub GUARDAR_MOVIMIENTO_ENTRADA()
+        '    MsgBox("entrada")
         Try
             If DataGridView1.Rows.Count > 0 Then
                 For i As Integer = 0 To DataGridView1.Rows.Count - 1
@@ -159,6 +160,7 @@ Public Class AJUSTE
                     Dim cmd As New SqlCommand("INGRESAR_CARDEX_AJUSTE", conex)
                     cmd.CommandType = CommandType.StoredProcedure
                     cmd.Parameters.Add("@ARTICULO", SqlDbType.VarChar).Value = DataGridView1.Rows(i).Cells(0).Value.ToString()
+                    '   cmd.Parameters.Add("@CARCONCEP", SqlDbType.Int).Value = 3
                     cmd.Parameters.Add("@CANTMOV", SqlDbType.Int).Value = DataGridView1.Rows(i).Cells(2).Value.ToString()
                     conex.Open()
                     cmd.ExecuteNonQuery()
@@ -173,6 +175,7 @@ Public Class AJUSTE
     End Sub
 
     Sub GUARDAR_MOVIMIENTO_SALIDA()
+        '      MsgBox("resta")
         Try
             If DataGridView1.Rows.Count > 0 Then
                 For i As Integer = 0 To DataGridView1.Rows.Count - 1
@@ -184,7 +187,7 @@ Public Class AJUSTE
                     cmd.Parameters.Add("@CANTMOV", SqlDbType.Int).Value = DataGridView1.Rows(i).Cells(2).Value.ToString()
                     conex.Open()
                     cmd.ExecuteNonQuery()
-                    DEVOLUCION_REM.BUSCAR_REMISIONES()
+                    '      DEVOLUCION_REM.BUSCAR_REMISIONES()
                     '   MessageBox.Show("REGISTRO GUARDADO CORRECTAMENTE", "SISTEMA")
                     conex.Close()
                 Next

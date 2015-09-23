@@ -254,7 +254,11 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+<<<<<<< HEAD
         <dsig:DigestValue>aiWwiSEr39W4ibqqRHizA0ZLPiYhgu2WzzfVtiT0hN8=</dsig:DigestValue>
+=======
+        <dsig:DigestValue>bJ2ObWbmOVb37O4Ezskdh+Ic6Cun+n3YTi5uAyL4p9E=</dsig:DigestValue>
+>>>>>>> 01bd4a287ddce73e1ef7c48a15456ed0652527b9
       </hash>
     </dependentAssembly>
   </dependency>

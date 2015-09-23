@@ -42,23 +42,22 @@ Public Class FACTURACION
     Private Sub BT_REMISIONES_Click(sender As Object, e As EventArgs) Handles BT_REMISIONES.Click
         REMISIONES_PENDIENTES.ShowDialog()
     End Sub
-    Sub cargarremisiones(OIDSELECCIONADOS() As Integer)
+    Sub cargarremisiones()
         Try
-            For number = 0 To OIDSELECCIONADOS.Length - 1
-                Dim conex As New SqlConnection(ConfigurationManager.ConnectionStrings("conexion").ConnectionString)
-                Dim cmd As New SqlCommand("BUSCAR_REMISION", conex)
-                cmd.CommandType = CommandType.StoredProcedure
-                cmd.Parameters.Add("@REMISIONC", SqlDbType.Int).Value = OIDSELECCIONADOS(number)
-                Dim ada As New SqlDataAdapter(cmd)
-                Dim tabla As New DataTable
-                conex.Open()
-                ada.Fill(tabla)
-                DataGridView1.DataSource = tabla
-                conex.Close()
-                DataGridView1.Columns(0).Width = 150
-                DataGridView1.Columns(1).Width = 150
-                DataGridView1.Columns(3).Width = 150
-            Next
+            Dim conex As New SqlConnection(ConfigurationManager.ConnectionStrings("conexion").ConnectionString)
+            Dim cmd As New SqlCommand("BUSCAR_REMISION", conex)
+            cmd.CommandType = CommandType.StoredProcedure
+            '  cmd.Parameters.Add("@REMISIONC", SqlDbType.VarChar).Value = OIDSELECCIONADOS
+            Dim ada As New SqlDataAdapter(cmd)
+            Dim tabla As New DataTable
+            conex.Open()
+            ada.Fill(tabla)
+            DataGridView1.DataSource = tabla
+            conex.Close()
+            DataGridView1.Columns(0).Width = 150
+            DataGridView1.Columns(1).Width = 150
+            DataGridView1.Columns(2).Width = 150
+            DataGridView1.Columns(3).Width = 150
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
