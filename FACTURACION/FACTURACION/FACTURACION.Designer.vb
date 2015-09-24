@@ -53,12 +53,20 @@ Partial Class FACTURACION
         Me.FontDialog1 = New System.Windows.Forms.FontDialog()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.TB_CANTIDADT = New System.Windows.Forms.TextBox()
+        Me.TB_CANTIDAD_VENTA = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.Codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Articulo = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Cant = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ValorUnit = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.SubTotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Eliminar = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.ToolStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ToolStrip1
@@ -66,7 +74,7 @@ Partial Class FACTURACION
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.BT_SALIR})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(959, 70)
+        Me.ToolStrip1.Size = New System.Drawing.Size(990, 70)
         Me.ToolStrip1.TabIndex = 3
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -217,6 +225,7 @@ Partial Class FACTURACION
         '
         'TB_CANTIDAD_ACTUAL
         '
+        Me.TB_CANTIDAD_ACTUAL.Enabled = False
         Me.TB_CANTIDAD_ACTUAL.Location = New System.Drawing.Point(13, 350)
         Me.TB_CANTIDAD_ACTUAL.Name = "TB_CANTIDAD_ACTUAL"
         Me.TB_CANTIDAD_ACTUAL.Size = New System.Drawing.Size(100, 20)
@@ -224,6 +233,7 @@ Partial Class FACTURACION
         '
         'TB_ARTICULO
         '
+        Me.TB_ARTICULO.Enabled = False
         Me.TB_ARTICULO.Location = New System.Drawing.Point(13, 306)
         Me.TB_ARTICULO.Name = "TB_ARTICULO"
         Me.TB_ARTICULO.Size = New System.Drawing.Size(100, 20)
@@ -231,6 +241,7 @@ Partial Class FACTURACION
         '
         'TB_CODIGO
         '
+        Me.TB_CODIGO.Enabled = False
         Me.TB_CODIGO.Location = New System.Drawing.Point(13, 260)
         Me.TB_CODIGO.Name = "TB_CODIGO"
         Me.TB_CODIGO.Size = New System.Drawing.Size(100, 20)
@@ -344,28 +355,83 @@ Partial Class FACTURACION
         Me.Button1.Text = "Cargar"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'TB_CANTIDADT
+        'TB_CANTIDAD_VENTA
         '
-        Me.TB_CANTIDADT.Location = New System.Drawing.Point(39, 640)
-        Me.TB_CANTIDADT.Name = "TB_CANTIDADT"
-        Me.TB_CANTIDADT.Size = New System.Drawing.Size(121, 20)
-        Me.TB_CANTIDADT.TabIndex = 8
+        Me.TB_CANTIDAD_VENTA.Location = New System.Drawing.Point(39, 640)
+        Me.TB_CANTIDAD_VENTA.Name = "TB_CANTIDAD_VENTA"
+        Me.TB_CANTIDAD_VENTA.Size = New System.Drawing.Size(121, 20)
+        Me.TB_CANTIDAD_VENTA.TabIndex = 8
         '
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(323, 211)
+        Me.DataGridView1.Location = New System.Drawing.Point(323, 184)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(624, 391)
+        Me.DataGridView1.Size = New System.Drawing.Size(655, 236)
         Me.DataGridView1.TabIndex = 9
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.AllowUserToAddRows = False
+        Me.DataGridView2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Codigo, Me.Articulo, Me.Cant, Me.ValorUnit, Me.SubTotal, Me.Eliminar})
+        Me.DataGridView2.Location = New System.Drawing.Point(323, 444)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.Size = New System.Drawing.Size(655, 236)
+        Me.DataGridView2.TabIndex = 71
+        '
+        'Codigo
+        '
+        Me.Codigo.Frozen = True
+        Me.Codigo.HeaderText = "Codigo"
+        Me.Codigo.Name = "Codigo"
+        Me.Codigo.Width = 75
+        '
+        'Articulo
+        '
+        Me.Articulo.Frozen = True
+        Me.Articulo.HeaderText = "Articulo"
+        Me.Articulo.Name = "Articulo"
+        Me.Articulo.Width = 175
+        '
+        'Cant
+        '
+        Me.Cant.Frozen = True
+        Me.Cant.HeaderText = "Cant"
+        Me.Cant.Name = "Cant"
+        Me.Cant.Width = 150
+        '
+        'ValorUnit
+        '
+        Me.ValorUnit.Frozen = True
+        Me.ValorUnit.HeaderText = "Valor Unit"
+        Me.ValorUnit.Name = "ValorUnit"
+        Me.ValorUnit.Width = 75
+        '
+        'SubTotal
+        '
+        Me.SubTotal.Frozen = True
+        Me.SubTotal.HeaderText = "Sub Total"
+        Me.SubTotal.Name = "SubTotal"
+        Me.SubTotal.Width = 75
+        '
+        'Eliminar
+        '
+        Me.Eliminar.HeaderText = "Eliminar"
+        Me.Eliminar.Name = "Eliminar"
+        Me.Eliminar.Width = 75
         '
         'FACTURACION
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(959, 681)
+        Me.ClientSize = New System.Drawing.Size(990, 714)
+        Me.Controls.Add(Me.DataGridView2)
         Me.Controls.Add(Me.DataGridView1)
-        Me.Controls.Add(Me.TB_CANTIDADT)
+        Me.Controls.Add(Me.TB_CANTIDAD_VENTA)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.GroupBox2)
@@ -382,6 +448,7 @@ Partial Class FACTURACION
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -417,6 +484,13 @@ Partial Class FACTURACION
     Friend WithEvents TB_CODIGO As System.Windows.Forms.TextBox
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents TB_CANTIDADT As System.Windows.Forms.TextBox
+    Friend WithEvents TB_CANTIDAD_VENTA As System.Windows.Forms.TextBox
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents DataGridView2 As System.Windows.Forms.DataGridView
+    Friend WithEvents Codigo As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Articulo As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Cant As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents ValorUnit As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents SubTotal As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Eliminar As System.Windows.Forms.DataGridViewButtonColumn
 End Class

@@ -5,13 +5,6 @@ Imports System.Windows.Forms
 
 Public Class FACTURACION
     Dim IVA_DB, IVA2, SUB_TOTAL, TOTALL, OID As Integer
-    Private Sub BT_SALIR_Click(sender As Object, e As EventArgs) Handles BT_SALIR.Click
-        Dispose()
-    End Sub
-
-    Private Sub TB_ID_LostFocus(sender As Object, e As EventArgs) Handles TB_ID.LostFocus
-        buscando2()
-    End Sub
 
     Sub buscando2()
         Try
@@ -23,9 +16,6 @@ Public Class FACTURACION
             conex.Open()
             dr = cmd.ExecuteReader
             If dr.Read Then
-                TB_NOMBRE.Enabled = True
-                TB_DIRECCION.Enabled = True
-                TB_TELEFONO.Enabled = True
                 BT_REMISIONES.Enabled = True
                 TB_NOMBRE.Text = dr(10)
                 TB_DIRECCION.Text = dr(13)
@@ -37,10 +27,6 @@ Public Class FACTURACION
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
-    End Sub
-
-    Private Sub BT_REMISIONES_Click(sender As Object, e As EventArgs) Handles BT_REMISIONES.Click
-        REMISIONES_PENDIENTES.ShowDialog()
     End Sub
     Sub cargarremisiones()
         Try
@@ -54,17 +40,15 @@ Public Class FACTURACION
             ada.Fill(tabla)
             DataGridView1.DataSource = tabla
             conex.Close()
-            DataGridView1.Columns(0).Width = 150
-            DataGridView1.Columns(1).Width = 150
+            DataGridView1.Columns(0).Width = 75
+            DataGridView1.Columns(1).Width = 175
             DataGridView1.Columns(2).Width = 150
-            DataGridView1.Columns(3).Width = 150
+            DataGridView1.Columns(3).Width = 75
+            DataGridView1.Columns(4).Width = 75
+            DataGridView1.Columns(5).Width = 75
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
-    End Sub
-
-    Private Sub TB_INFO_TextChanged(sender As Object, e As EventArgs) Handles TB_INFO.TextChanged
-        PREGUNTA()
     End Sub
     Sub PREGUNTA()
         If RB_CODIGO.Checked = True Then
@@ -112,10 +96,6 @@ Public Class FACTURACION
 
         End Try
     End Sub
-
-    Private Sub LB_INFO_SelectedIndexChanged(sender As Object, e As EventArgs) Handles LB_INFO.SelectedIndexChanged
-        buscando3()
-    End Sub
     Sub buscando3()
         Try
             Dim conex As New SqlConnection(ConfigurationManager.ConnectionStrings("conexion").ConnectionString)
@@ -160,7 +140,53 @@ Public Class FACTURACION
         End Try
     End Sub
 
+    Sub VALIDACIONES()
+        If Val(TB_CANTIDAD_VENTA.Text) > Val(TB_CANTIDAD_ACTUAL.Text) Then
+            MsgBox("NO hay existencia suficientes para esta remision")
+        Else
+            CARGAR()
+        End If
+    End Sub
+    Sub CARGAR()
+        CALCULOS()
+        Me.DataGridView2.Rows.Add(TB_CODIGO.Text, TB_ARTICULO.Text, TB_CANTIDAD_VENTA.Text, TB_PRECIO.Text, SUB_TOTAL)
+    End Sub
+    Sub CALCULOS()
+
+        SUB_TOTAL = Val(TB_CANTIDAD_VENTA.Text * TB_PRECIO.Text)
+        IVA2 = Val(SUB_TOTAL * IVA_DB) / 100
+        TOTALL = IVA2 + SUB_TOTAL
+    End Sub
+
     Private Sub FACTURACION_Load(sender As Object, e As EventArgs) Handles Me.Load
         BUSCAR_BODEGA()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        VALIDACIONES()
+    End Sub
+    Private Sub LB_INFO_SelectedIndexChanged(sender As Object, e As EventArgs) Handles LB_INFO.SelectedIndexChanged
+        buscando3()
+    End Sub
+    Private Sub BT_SALIR_Click(sender As Object, e As EventArgs) Handles BT_SALIR.Click
+        Dispose()
+    End Sub
+
+    Private Sub TB_ID_LostFocus(sender As Object, e As EventArgs) Handles TB_ID.LostFocus
+        buscando2()
+    End Sub
+    Private Sub BT_REMISIONES_Click(sender As Object, e As EventArgs) Handles BT_REMISIONES.Click
+        REMISIONES_PENDIENTES.ShowDialog()
+    End Sub
+    Private Sub TB_INFO_TextChanged(sender As Object, e As EventArgs) Handles TB_INFO.TextChanged
+        PREGUNTA()
+    End Sub
+    Private Sub DataGridView2_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView2.CellContentClick
+        If DataGridView2.Columns(e.ColumnIndex).Name = "Eliminar" Then
+            'eliminar row
+            DataGridView2.Rows.RemoveAt(e.RowIndex)
+        End If
+
+        '     RECALCULAR()
     End Sub
 End Class

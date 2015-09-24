@@ -23,9 +23,8 @@ Partial Class REMISIONES_PENDIENTES
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.BT_ENVIAR = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Column1 = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.BT_ENVIAR = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -41,47 +40,35 @@ Partial Class REMISIONES_PENDIENTES
         Me.DataGridView1.Size = New System.Drawing.Size(339, 377)
         Me.DataGridView1.TabIndex = 0
         '
-        'BT_ENVIAR
-        '
-        Me.BT_ENVIAR.Location = New System.Drawing.Point(33, 445)
-        Me.BT_ENVIAR.Name = "BT_ENVIAR"
-        Me.BT_ENVIAR.Size = New System.Drawing.Size(75, 23)
-        Me.BT_ENVIAR.TabIndex = 1
-        Me.BT_ENVIAR.Text = "Enviar"
-        Me.BT_ENVIAR.UseVisualStyleBackColor = True
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(448, 199)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 13)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Label1"
-        '
         'Column1
         '
         Me.Column1.HeaderText = ""
         Me.Column1.Name = "Column1"
         Me.Column1.ReadOnly = True
         '
+        'BT_ENVIAR
+        '
+        Me.BT_ENVIAR.Location = New System.Drawing.Point(165, 461)
+        Me.BT_ENVIAR.Name = "BT_ENVIAR"
+        Me.BT_ENVIAR.Size = New System.Drawing.Size(75, 23)
+        Me.BT_ENVIAR.TabIndex = 1
+        Me.BT_ENVIAR.Text = "Enviar"
+        Me.BT_ENVIAR.UseVisualStyleBackColor = True
+        '
         'REMISIONES_PENDIENTES
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(606, 529)
-        Me.Controls.Add(Me.Label1)
+        Me.ClientSize = New System.Drawing.Size(407, 529)
         Me.Controls.Add(Me.BT_ENVIAR)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "REMISIONES_PENDIENTES"
         Me.Text = "REMISIONES_PENDIENTES"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents BT_ENVIAR As System.Windows.Forms.Button
-    Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Column1 As DataGridViewCheckBoxColumn
 End Class
