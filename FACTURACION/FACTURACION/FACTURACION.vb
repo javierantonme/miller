@@ -46,6 +46,7 @@ Public Class FACTURACION
             DataGridView1.Columns(3).Width = 75
             DataGridView1.Columns(4).Width = 75
             DataGridView1.Columns(5).Width = 75
+            DataGridView1.Columns(6).Visible = False
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
@@ -188,5 +189,9 @@ Public Class FACTURACION
         End If
 
         '     RECALCULAR()
+    End Sub
+
+    Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
+
     End Sub
 End Class

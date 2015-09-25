@@ -305,13 +305,13 @@ Partial Class FACTURACION
         Me.RB_DESCRIPCION.Name = "RB_DESCRIPCION"
         Me.RB_DESCRIPCION.Size = New System.Drawing.Size(81, 17)
         Me.RB_DESCRIPCION.TabIndex = 3
-        Me.RB_DESCRIPCION.TabStop = True
         Me.RB_DESCRIPCION.Text = "Descripcion"
         Me.RB_DESCRIPCION.UseVisualStyleBackColor = True
         '
         'RB_CODIGO
         '
         Me.RB_CODIGO.AutoSize = True
+        Me.RB_CODIGO.Checked = True
         Me.RB_CODIGO.Location = New System.Drawing.Point(10, 64)
         Me.RB_CODIGO.Name = "RB_CODIGO"
         Me.RB_CODIGO.Size = New System.Drawing.Size(58, 17)
