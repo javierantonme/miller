@@ -20,6 +20,7 @@ Public Class FACTURACION
                 TB_NOMBRE.Text = dr(10)
                 TB_DIRECCION.Text = dr(13)
                 TB_TELEFONO.Text = dr(14)
+                Button1.Enabled = True
                 conex.Close()
             Else
                 conex.Close()
@@ -158,6 +159,46 @@ Public Class FACTURACION
         IVA2 = Val(SUB_TOTAL * IVA_DB) / 100
         TOTALL = IVA2 + SUB_TOTAL
     End Sub
+    Sub GUARDAR_MOVIMIENTO()
+        Try
+            If DataGridView2.Rows.Count > 0 Then
+                For i As Integer = 0 To DataGridView2.Rows.Count - 1
+                    Dim conex As New SqlConnection(ConfigurationManager.ConnectionStrings("conexion").ConnectionString)
+                    Dim cmd As New SqlCommand("INGRESAR_CARDEX_FACTURACION", conex)
+                    cmd.CommandType = CommandType.StoredProcedure
+                    cmd.Parameters.Add("@ARTICULO", SqlDbType.VarChar).Value = DataGridView2.Rows(i).Cells(0).Value.ToString()
+                    cmd.Parameters.Add("@CARCONCEP", SqlDbType.Int).Value = 5
+                    cmd.Parameters.Add("@CANTMOV", SqlDbType.Int).Value = DataGridView2.Rows(i).Cells(2).Value.ToString()
+                    conex.Open()
+                    cmd.ExecuteNonQuery()
+                    DEVOLUCION_REM.BUSCAR_REMISIONES()
+                    '   MessageBox.Show("REGISTRO GUARDADO CORRECTAMENTE", "SISTEMA")
+                    conex.Close()
+                Next
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+    Sub CAMBIAR_ESTADO_REMISION()
+        Try
+            If DataGridView1.Rows.Count > 0 Then
+                For i As Integer = 0 To DataGridView1.Rows.Count - 1
+                    Dim conex As New SqlConnection(ConfigurationManager.ConnectionStrings("conexion").ConnectionString)
+                    Dim cmd As New SqlCommand("MODIFICAR_REMISIONC_ESTADO", conex)
+                    cmd.CommandType = CommandType.StoredProcedure
+                    cmd.Parameters.Add("@OID", SqlDbType.Int).Value = DataGridView1.Rows(i).Cells(0).Value
+                    conex.Open()
+                    cmd.ExecuteNonQuery()
+                    DEVOLUCION_REM.BUSCAR_REMISIONES()
+                    '   MessageBox.Show("REGISTRO GUARDADO CORRECTAMENTE", "SISTEMA")
+                    conex.Close()
+                Next
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
 
     Private Sub FACTURACION_Load(sender As Object, e As EventArgs) Handles Me.Load
         BUSCAR_BODEGA()
@@ -192,6 +233,14 @@ Public Class FACTURACION
     End Sub
 
     Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
+        GUARDAR_MOVIMIENTO()
+        CAMBIAR_ESTADO_REMISION()
+        Dim response As MsgBoxResult
+        response = MsgBox("Desea ....", MsgBoxStyle.Question, "")
+        If response = MsgBoxResult.Yes Then   ' User chose Yes.
 
+        Else
+
+        End If
     End Sub
 End Class
