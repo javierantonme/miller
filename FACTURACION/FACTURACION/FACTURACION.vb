@@ -4,7 +4,7 @@ Imports System.Configuration
 Imports System.Windows.Forms
 
 Public Class FACTURACION
-    Dim IVA_DB, IVA2, SUB_TOTAL, TOTALL, OID As Integer
+    Public IVA_DB, IVA2, SUB_TOTAL, TOTALL, OID, TotalFinal As Integer
 
     Sub buscando2()
         Try
@@ -151,7 +151,7 @@ Public Class FACTURACION
     End Sub
     Sub CARGAR()
         CALCULOS()
-        Me.DataGridView2.Rows.Add(TB_CODIGO.Text, TB_ARTICULO.Text, TB_CANTIDAD_VENTA.Text, TB_PRECIO.Text, SUB_TOTAL)
+        Me.DataGridView2.Rows.Add(TB_CODIGO.Text, TB_ARTICULO.Text, TB_CANTIDAD_VENTA.Text, TB_PRECIO.Text, SUB_TOTAL, TOTALL)
     End Sub
     Sub CALCULOS()
 
@@ -199,6 +199,21 @@ Public Class FACTURACION
             MessageBox.Show(ex.Message)
         End Try
     End Sub
+    Sub TOTALES()
+        Try
+            Dim Total1, Total2 As Single
+            Dim Col As Integer = DataGridView1.CurrentCell.ColumnIndex
+            For Each row As DataGridViewRow In DataGridView1.Rows
+                Total1 += Val(row.Cells(6).Value)
+            Next
+            For Each row As DataGridViewRow In DataGridView2.Rows
+                Total2 += Val(row.Cells(5).Value)
+            Next
+            TotalFinal = Total1 + Total2
+        Catch ex As Exception
+            MessageBox.Show(ex.Message & "Error Funcion SUMA")
+        End Try
+    End Sub
 
     Private Sub FACTURACION_Load(sender As Object, e As EventArgs) Handles Me.Load
         BUSCAR_BODEGA()
@@ -235,12 +250,7 @@ Public Class FACTURACION
     Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
         GUARDAR_MOVIMIENTO()
         CAMBIAR_ESTADO_REMISION()
-        Dim response As MsgBoxResult
-        response = MsgBox("Desea ....", MsgBoxStyle.Question, "")
-        If response = MsgBoxResult.Yes Then   ' User chose Yes.
-
-        Else
-
-        End If
+        TOTALES()
+        PAGOS.ShowDialog()
     End Sub
 End Class

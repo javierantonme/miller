@@ -155,3 +155,4 @@ D:\git3\miller\FACTURACION\FACTURACION\obj\Debug\FACTURACION.vbproj.GenerateReso
 D:\git3\miller\FACTURACION\FACTURACION\obj\Debug\FACTURACION.exe.licenses
 D:\git3\miller\FACTURACION\FACTURACION\obj\Debug\FACTURACION.exe.manifest
 D:\git3\miller\FACTURACION\FACTURACION\obj\Debug\FACTURACION.application
+D:\git3\miller\FACTURACION\FACTURACION\obj\Debug\FACTURACION.PAGOS.resources

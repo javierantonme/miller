@@ -23,8 +23,6 @@ Partial Class FACTURACION
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
-        Me.BT_SALIR = New System.Windows.Forms.ToolStripButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.BT_REMISIONES = New System.Windows.Forms.Button()
         Me.TB_TELEFONO = New System.Windows.Forms.TextBox()
@@ -56,11 +54,14 @@ Partial Class FACTURACION
         Me.TB_CANTIDAD_VENTA = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.BT_SALIR = New System.Windows.Forms.ToolStripButton()
         Me.Codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Articulo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Cant = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ValorUnit = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SubTotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Iva = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Eliminar = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.ToolStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -77,26 +78,6 @@ Partial Class FACTURACION
         Me.ToolStrip1.Size = New System.Drawing.Size(990, 70)
         Me.ToolStrip1.TabIndex = 3
         Me.ToolStrip1.Text = "ToolStrip1"
-        '
-        'ToolStripButton1
-        '
-        Me.ToolStripButton1.Image = Global.FACTURACION.My.Resources.Resources.floppy_disk
-        Me.ToolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(53, 67)
-        Me.ToolStripButton1.Text = "Guardar"
-        Me.ToolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        '
-        'BT_SALIR
-        '
-        Me.BT_SALIR.Image = Global.FACTURACION.My.Resources.Resources.salir_48_48
-        Me.BT_SALIR.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.BT_SALIR.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BT_SALIR.Name = "BT_SALIR"
-        Me.BT_SALIR.Size = New System.Drawing.Size(52, 67)
-        Me.BT_SALIR.Text = "Salir"
-        Me.BT_SALIR.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'GroupBox1
         '
@@ -381,11 +362,31 @@ Partial Class FACTURACION
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Codigo, Me.Articulo, Me.Cant, Me.ValorUnit, Me.SubTotal, Me.Eliminar})
+        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Codigo, Me.Articulo, Me.Cant, Me.ValorUnit, Me.SubTotal, Me.Iva, Me.Eliminar})
         Me.DataGridView2.Location = New System.Drawing.Point(323, 444)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.Size = New System.Drawing.Size(655, 236)
         Me.DataGridView2.TabIndex = 71
+        '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.Image = Global.FACTURACION.My.Resources.Resources.floppy_disk
+        Me.ToolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(53, 67)
+        Me.ToolStripButton1.Text = "Guardar"
+        Me.ToolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        '
+        'BT_SALIR
+        '
+        Me.BT_SALIR.Image = Global.FACTURACION.My.Resources.Resources.salir_48_48
+        Me.BT_SALIR.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.BT_SALIR.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BT_SALIR.Name = "BT_SALIR"
+        Me.BT_SALIR.Size = New System.Drawing.Size(52, 67)
+        Me.BT_SALIR.Text = "Salir"
+        Me.BT_SALIR.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'Codigo
         '
@@ -421,6 +422,13 @@ Partial Class FACTURACION
         Me.SubTotal.HeaderText = "Sub Total"
         Me.SubTotal.Name = "SubTotal"
         Me.SubTotal.Width = 75
+        '
+        'Iva
+        '
+        Me.Iva.HeaderText = "Iva"
+        Me.Iva.Name = "Iva"
+        Me.Iva.ReadOnly = True
+        Me.Iva.Visible = False
         '
         'Eliminar
         '
@@ -496,5 +504,6 @@ Partial Class FACTURACION
     Friend WithEvents Cant As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents ValorUnit As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents SubTotal As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Iva As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Eliminar As System.Windows.Forms.DataGridViewButtonColumn
 End Class
