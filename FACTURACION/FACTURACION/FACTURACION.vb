@@ -47,7 +47,8 @@ Public Class FACTURACION
             DataGridView1.Columns(3).Width = 75
             DataGridView1.Columns(4).Width = 75
             DataGridView1.Columns(5).Width = 75
-            DataGridView1.Columns(6).Visible = False
+            DataGridView1.Columns(6).Width = 75
+            DataGridView1.Columns(7).Visible = False
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
@@ -151,7 +152,7 @@ Public Class FACTURACION
     End Sub
     Sub CARGAR()
         CALCULOS()
-        Me.DataGridView2.Rows.Add(TB_CODIGO.Text, TB_ARTICULO.Text, TB_CANTIDAD_VENTA.Text, TB_PRECIO.Text, SUB_TOTAL, TOTALL)
+        Me.DataGridView2.Rows.Add(TB_CODIGO.Text, TB_ARTICULO.Text, TB_CANTIDAD_VENTA.Text, TB_PRECIO.Text, SUB_TOTAL, IVA_DB, TOTALL)
     End Sub
     Sub CALCULOS()
 
@@ -204,10 +205,10 @@ Public Class FACTURACION
             Dim Total1, Total2 As Single
             Dim Col As Integer = DataGridView1.CurrentCell.ColumnIndex
             For Each row As DataGridViewRow In DataGridView1.Rows
-                Total1 += Val(row.Cells(6).Value)
+                Total1 += Val(row.Cells(7).Value)
             Next
             For Each row As DataGridViewRow In DataGridView2.Rows
-                Total2 += Val(row.Cells(5).Value)
+                Total2 += Val(row.Cells(6).Value)
             Next
             TotalFinal = Total1 + Total2
         Catch ex As Exception

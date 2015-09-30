@@ -23,6 +23,8 @@ Partial Class FACTURACION
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.BT_SALIR = New System.Windows.Forms.ToolStripButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.BT_REMISIONES = New System.Windows.Forms.Button()
         Me.TB_TELEFONO = New System.Windows.Forms.TextBox()
@@ -54,14 +56,13 @@ Partial Class FACTURACION
         Me.TB_CANTIDAD_VENTA = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
-        Me.BT_SALIR = New System.Windows.Forms.ToolStripButton()
         Me.Codigo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Articulo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Cant = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ValorUnit = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.SubTotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Iva = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Total = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Eliminar = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.ToolStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -75,9 +76,29 @@ Partial Class FACTURACION
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.BT_SALIR})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(990, 70)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1073, 70)
         Me.ToolStrip1.TabIndex = 3
         Me.ToolStrip1.Text = "ToolStrip1"
+        '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.Image = Global.FACTURACION.My.Resources.Resources.floppy_disk
+        Me.ToolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(53, 67)
+        Me.ToolStripButton1.Text = "Guardar"
+        Me.ToolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        '
+        'BT_SALIR
+        '
+        Me.BT_SALIR.Image = Global.FACTURACION.My.Resources.Resources.salir_48_48
+        Me.BT_SALIR.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.BT_SALIR.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.BT_SALIR.Name = "BT_SALIR"
+        Me.BT_SALIR.Size = New System.Drawing.Size(52, 67)
+        Me.BT_SALIR.Text = "Salir"
+        Me.BT_SALIR.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'GroupBox1
         '
@@ -92,7 +113,7 @@ Partial Class FACTURACION
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(13, 83)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(915, 102)
+        Me.GroupBox1.Size = New System.Drawing.Size(1030, 102)
         Me.GroupBox1.TabIndex = 4
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Datos Personales"
@@ -100,7 +121,7 @@ Partial Class FACTURACION
         'BT_REMISIONES
         '
         Me.BT_REMISIONES.Enabled = False
-        Me.BT_REMISIONES.Location = New System.Drawing.Point(819, 52)
+        Me.BT_REMISIONES.Location = New System.Drawing.Point(936, 52)
         Me.BT_REMISIONES.Name = "BT_REMISIONES"
         Me.BT_REMISIONES.Size = New System.Drawing.Size(75, 23)
         Me.BT_REMISIONES.TabIndex = 8
@@ -110,7 +131,7 @@ Partial Class FACTURACION
         'TB_TELEFONO
         '
         Me.TB_TELEFONO.Enabled = False
-        Me.TB_TELEFONO.Location = New System.Drawing.Point(504, 76)
+        Me.TB_TELEFONO.Location = New System.Drawing.Point(570, 74)
         Me.TB_TELEFONO.Name = "TB_TELEFONO"
         Me.TB_TELEFONO.Size = New System.Drawing.Size(263, 20)
         Me.TB_TELEFONO.TabIndex = 7
@@ -126,7 +147,7 @@ Partial Class FACTURACION
         'TB_NOMBRE
         '
         Me.TB_NOMBRE.Enabled = False
-        Me.TB_NOMBRE.Location = New System.Drawing.Point(504, 39)
+        Me.TB_NOMBRE.Location = New System.Drawing.Point(570, 37)
         Me.TB_NOMBRE.Name = "TB_NOMBRE"
         Me.TB_NOMBRE.Size = New System.Drawing.Size(263, 20)
         Me.TB_NOMBRE.TabIndex = 5
@@ -141,7 +162,7 @@ Partial Class FACTURACION
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(501, 20)
+        Me.Label4.Location = New System.Drawing.Point(567, 18)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(95, 13)
         Me.Label4.TabIndex = 3
@@ -159,7 +180,7 @@ Partial Class FACTURACION
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(501, 62)
+        Me.Label2.Location = New System.Drawing.Point(567, 60)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(49, 13)
         Me.Label2.TabIndex = 1
@@ -352,7 +373,7 @@ Partial Class FACTURACION
         Me.DataGridView1.Location = New System.Drawing.Point(323, 184)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(655, 236)
+        Me.DataGridView1.Size = New System.Drawing.Size(738, 236)
         Me.DataGridView1.TabIndex = 9
         '
         'DataGridView2
@@ -362,31 +383,11 @@ Partial Class FACTURACION
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Codigo, Me.Articulo, Me.Cant, Me.ValorUnit, Me.SubTotal, Me.Iva, Me.Eliminar})
+        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Codigo, Me.Articulo, Me.Cant, Me.ValorUnit, Me.SubTotal, Me.Iva, Me.Total, Me.Eliminar})
         Me.DataGridView2.Location = New System.Drawing.Point(323, 444)
         Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(655, 236)
+        Me.DataGridView2.Size = New System.Drawing.Size(738, 238)
         Me.DataGridView2.TabIndex = 71
-        '
-        'ToolStripButton1
-        '
-        Me.ToolStripButton1.Image = Global.FACTURACION.My.Resources.Resources.floppy_disk
-        Me.ToolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(53, 67)
-        Me.ToolStripButton1.Text = "Guardar"
-        Me.ToolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        '
-        'BT_SALIR
-        '
-        Me.BT_SALIR.Image = Global.FACTURACION.My.Resources.Resources.salir_48_48
-        Me.BT_SALIR.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.BT_SALIR.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.BT_SALIR.Name = "BT_SALIR"
-        Me.BT_SALIR.Size = New System.Drawing.Size(52, 67)
-        Me.BT_SALIR.Text = "Salir"
-        Me.BT_SALIR.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         '
         'Codigo
         '
@@ -428,7 +429,13 @@ Partial Class FACTURACION
         Me.Iva.HeaderText = "Iva"
         Me.Iva.Name = "Iva"
         Me.Iva.ReadOnly = True
-        Me.Iva.Visible = False
+        Me.Iva.Width = 75
+        '
+        'Total
+        '
+        Me.Total.HeaderText = "Total"
+        Me.Total.Name = "Total"
+        Me.Total.Visible = False
         '
         'Eliminar
         '
@@ -440,7 +447,7 @@ Partial Class FACTURACION
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(990, 714)
+        Me.ClientSize = New System.Drawing.Size(1073, 716)
         Me.Controls.Add(Me.DataGridView2)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.TB_CANTIDAD_VENTA)
@@ -505,5 +512,6 @@ Partial Class FACTURACION
     Friend WithEvents ValorUnit As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents SubTotal As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Iva As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Total As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Eliminar As System.Windows.Forms.DataGridViewButtonColumn
 End Class
