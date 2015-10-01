@@ -203,7 +203,6 @@ Public Class FACTURACION
     Sub TOTALES()
         Try
             Dim Total1, Total2 As Single
-            Dim Col As Integer = DataGridView1.CurrentCell.ColumnIndex
             For Each row As DataGridViewRow In DataGridView1.Rows
                 Total1 += Val(row.Cells(7).Value)
             Next
