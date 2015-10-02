@@ -38,13 +38,14 @@ Partial Class MENU1
         Me.AjustesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.FacturacionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TodasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FacturacionToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StatusStrip = New System.Windows.Forms.StatusStrip()
         Me.LB_USUARIO = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.FacturacionToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ConceptosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -62,7 +63,7 @@ Partial Class MENU1
         '
         'FileMenu
         '
-        Me.FileMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripSeparator5, Me.ClientesToolStripMenuItem, Me.BodegasToolStripMenuItem, Me.ArticulosToolStripMenuItem, Me.UnidadesToolStripMenuItem, Me.UsuariosToolStripMenuItem})
+        Me.FileMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripSeparator5, Me.ClientesToolStripMenuItem, Me.BodegasToolStripMenuItem, Me.ArticulosToolStripMenuItem, Me.UnidadesToolStripMenuItem, Me.UsuariosToolStripMenuItem, Me.ConceptosToolStripMenuItem})
         Me.FileMenu.ImageTransparentColor = System.Drawing.SystemColors.ActiveBorder
         Me.FileMenu.Name = "FileMenu"
         Me.FileMenu.Size = New System.Drawing.Size(60, 20)
@@ -113,19 +114,19 @@ Partial Class MENU1
         'InventariosToolStripMenuItem
         '
         Me.InventariosToolStripMenuItem.Name = "InventariosToolStripMenuItem"
-        Me.InventariosToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
+        Me.InventariosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.InventariosToolStripMenuItem.Text = "Inventarios"
         '
         'KardexToolStripMenuItem
         '
         Me.KardexToolStripMenuItem.Name = "KardexToolStripMenuItem"
-        Me.KardexToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
+        Me.KardexToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.KardexToolStripMenuItem.Text = "Kardex"
         '
         'AjustesToolStripMenuItem
         '
         Me.AjustesToolStripMenuItem.Name = "AjustesToolStripMenuItem"
-        Me.AjustesToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
+        Me.AjustesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.AjustesToolStripMenuItem.Text = "Ajustes"
         '
         'FacturacionToolStripMenuItem
@@ -140,6 +141,12 @@ Partial Class MENU1
         Me.TodasToolStripMenuItem.Name = "TodasToolStripMenuItem"
         Me.TodasToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.TodasToolStripMenuItem.Text = "Remisiones"
+        '
+        'FacturacionToolStripMenuItem1
+        '
+        Me.FacturacionToolStripMenuItem1.Name = "FacturacionToolStripMenuItem1"
+        Me.FacturacionToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.FacturacionToolStripMenuItem1.Text = "Facturacion"
         '
         'SalirToolStripMenuItem
         '
@@ -184,11 +191,11 @@ Partial Class MENU1
         Me.PictureBox1.TabIndex = 9
         Me.PictureBox1.TabStop = False
         '
-        'FacturacionToolStripMenuItem1
+        'ConceptosToolStripMenuItem
         '
-        Me.FacturacionToolStripMenuItem1.Name = "FacturacionToolStripMenuItem1"
-        Me.FacturacionToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
-        Me.FacturacionToolStripMenuItem1.Text = "Facturacion"
+        Me.ConceptosToolStripMenuItem.Name = "ConceptosToolStripMenuItem"
+        Me.ConceptosToolStripMenuItem.Size = New System.Drawing.Size(153, 22)
+        Me.ConceptosToolStripMenuItem.Text = "Conceptos"
         '
         'MENU1
         '
@@ -238,5 +245,6 @@ Partial Class MENU1
     Friend WithEvents SalirToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AjustesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents FacturacionToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ConceptosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

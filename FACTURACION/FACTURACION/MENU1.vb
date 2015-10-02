@@ -60,4 +60,8 @@ Public Class MENU1
     Private Sub FacturacionToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles FacturacionToolStripMenuItem1.Click
         FACTURACION.ShowDialog()
     End Sub
+
+    Private Sub ConceptosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConceptosToolStripMenuItem.Click
+        CONCEPTOS.ShowDialog()
+    End Sub
 End Class

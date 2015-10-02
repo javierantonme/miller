@@ -7,14 +7,14 @@
     <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="FACTURACION.exe.manifest" size="55077">
+    <dependentAssembly dependencyType="install" codebase="FACTURACION.exe.manifest" size="55079">
       <assemblyIdentity name="FACTURACION.exe" version="1.0.0.2" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>KsZmX8pyv4hxYZeYWl/oICzxZ8I8fMIMyrTxZBat0o4=</dsig:DigestValue>
+        <dsig:DigestValue>b2P83hI1KO4b22Uw+rKcSYLaix9ZP72jc0g77UVxsv0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
